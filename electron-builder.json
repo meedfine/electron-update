@@ -1,23 +1,20 @@
-/**
- * @see https://www.electron.build/configuration/configuration
- */
 {
   "$schema": "https://raw.githubusercontent.com/electron-userland/electron-builder/master/packages/app-builder-lib/scheme.json",
   "appId": "YourAppID",
   "asar": true,
-  "productName": "YourAppName",
+  "productName": "ElectronUpdateDemo",
   "directories": {
-    "output": "release/${version}"
+    "output": "dist/${version}"
   },
   "files": [
-    "dist",
+    "dist-web",
     "dist-electron"
   ],
   "mac": {
     "target": [
       "dmg"
     ],
-    "artifactName": "${productName}-Mac-${version}-Installer.${ext}"
+    "artifactName": "${productName}-${version}-Installer.${ext}"
   },
   "win": {
     "target": [
@@ -28,7 +25,7 @@
         ]
       }
     ],
-    "artifactName": "${productName}-Windows-${version}-Setup.${ext}"
+    "artifactName": "${productName}-${version}.${ext}"
   },
   "nsis": {
     "oneClick": false,
@@ -40,6 +37,6 @@
     "target": [
       "AppImage"
     ],
-    "artifactName": "${productName}-Linux-${version}.${ext}"
+    "artifactName": "${productName}-${version}.${ext}"
   }
 }

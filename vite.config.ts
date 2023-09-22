@@ -2,11 +2,16 @@ import { defineConfig } from 'vite'
 import path from 'node:path'
 import electron from 'vite-plugin-electron/simple'
 import vue from '@vitejs/plugin-vue'
+import UnoCSS from 'unocss/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  build:{
+    outDir: 'dist-web'
+  },
   plugins: [
     vue(),
+    UnoCSS(),
     electron({
       main: {
         // Shortcut of `build.lib.entry`.

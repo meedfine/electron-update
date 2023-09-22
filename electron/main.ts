@@ -10,7 +10,7 @@ import path from 'node:path'
 // │ │ ├── main.js
 // │ │ └── preload.js
 // │
-process.env.DIST = path.join(__dirname, '../dist')
+process.env.DIST = path.join(__dirname, '../dist-web')
 process.env.VITE_PUBLIC = app.isPackaged ? process.env.DIST : path.join(process.env.DIST, '../public')
 
 
@@ -21,6 +21,10 @@ const VITE_DEV_SERVER_URL = process.env['VITE_DEV_SERVER_URL']
 function createWindow() {
   win = new BrowserWindow({
     icon: path.join(process.env.VITE_PUBLIC, 'electron-vite.svg'),
+    autoHideMenuBar:true,
+    show:false,
+    width:1000,
+    height:600,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
     },
@@ -37,6 +41,10 @@ function createWindow() {
     // win.loadFile('dist/index.html')
     win.loadFile(path.join(process.env.DIST, 'index.html'))
   }
+
+  win.once('ready-to-show', () => {
+    win?.show()
+  })
 }
 
 // Quit when all windows are closed, except on macOS. There, it's common
