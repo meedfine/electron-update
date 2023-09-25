@@ -6,6 +6,7 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 html,
 body,
 #app {
@@ -14,8 +15,17 @@ body,
 
 body,
 #app {
-  font: 14px/1.5 Consolas, 'Helvetica Neue', Helvetica, Tahoma, 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC',
-    'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+  font:
+    14px/1.5 Consolas,
+    'Helvetica Neue',
+    Helvetica,
+    Tahoma,
+    'PingFang SC',
+    'Hiragino Sans GB',
+    'Heiti SC',
+    'Microsoft YaHei',
+    'WenQuanYi Micro Hei',
+    sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -24,11 +34,13 @@ body,
   background-color: #fff;
   color: #333;
 }
+
 img {
   display: inline-block;
   -webkit-user-drag: none;
   vertical-align: middle;
 }
+
 a {
   color: #0000ee;
   text-decoration: underline;

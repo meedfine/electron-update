@@ -6,8 +6,8 @@ import UnoCSS from 'unocss/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  build:{
-    outDir: 'dist-web'
+  build: {
+    outDir: 'dist-web',
   },
   plugins: [
     vue(),

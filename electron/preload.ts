@@ -21,5 +21,3 @@ function withPrototype(obj: Record<string, any>) {
   }
   return obj
 }
-
-
