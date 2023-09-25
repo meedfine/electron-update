@@ -4,6 +4,7 @@ module.exports = {
     // 'eslint:recommended',
     'plugin:vue/vue3-recommended',
     'plugin:prettier/recommended',
+    './.eslintrc-auto-import.json',
   ],
   rules: {
     // override/add rules settings here, such as:
