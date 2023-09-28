@@ -1,5 +1,6 @@
-import { app, BrowserWindow } from 'electron'
+import { app, BrowserWindow, ipcMain } from 'electron'
 import path from 'node:path'
+import { initUpdate } from './update'
 
 // The built directory structure
 //
@@ -43,6 +44,12 @@ function createWindow() {
 
   win.once('ready-to-show', () => {
     win?.show()
+  })
+
+  initUpdate({
+    app,
+    win,
+    ipcMain,
   })
 }
 
